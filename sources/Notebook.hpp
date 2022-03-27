@@ -1,6 +1,6 @@
 #include <string>
 #include <iostream>
-#include "Direction.hpp"
+#include "../Direction.hpp"
 #include <map>
 #include <vector>
 
@@ -13,7 +13,7 @@ namespace ariel {
 
     public:
         Notebook();
-        ~Notebook();
+       // ~Notebook();
 
         void write(int page, int row, int col, Direction direction, string str);
         string read(int page, int row, int col, Direction direction, int num);
