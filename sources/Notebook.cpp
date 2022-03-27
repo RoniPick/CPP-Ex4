@@ -85,7 +85,6 @@ void Notebook::write(int page, int row, int col, Direction direction, string str
         for(int i=0; i<len; i++){
             noteMap[page][(row+i)][(unsigned int)col] = str[(unsigned int)(i)];
         }
-
     }
 
 }

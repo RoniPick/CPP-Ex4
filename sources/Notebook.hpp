@@ -2,7 +2,6 @@
 #include <iostream>
 #include "../Direction.hpp"
 #include <map>
-//#include <vector>
 
 using namespace std;
 
