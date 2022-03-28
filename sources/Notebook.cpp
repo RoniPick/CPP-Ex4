@@ -199,18 +199,21 @@ void Notebook::show(int page){
     if(page < minNum){
         throw invalid_argument("Error, please enter positive number");
     }
-//    string ans;
-    int len = noteMap[page].size();
-    for(int i=0; i<len; i++){
-        if(noteMap[page].find(i) == noteMap[page].end()){
-            cout << i << ".         ...      \n";
+
+    //if the page is not in the book
+    const int len = 10;
+    if(noteMap.find(page) == noteMap.end()){
+        for(int i=0; i<len; i++){
+            cout << i << ".  ______________\n";
         }
-        else{
-            cout << i << "." << noteMap[page][i];
-//            for(int j=0; j<100; j++){
-//                cout << i << "." << noteMap[page][i];
-//            }
-        }
+        return;
     }
+
+    map<int, string> pg = noteMap[page];
+    for (auto const& p : pg){
+            //           string (key)        string's value
+            std::cout << p.first << ".    " << p.second << std::endl;
+        }
+
 }
 
